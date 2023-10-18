@@ -49,7 +49,10 @@ export class LibraryFilterComponent implements OnInit, OnChanges {
     if (_.isEmpty(contentTypes)) {
       contentTypes = _.map(this.helperService.contentPrimaryCategories, 'name');
     }
-
+    //Filter out course from the list.
+    if(contentTypes.length > 0) {
+      contentTypes = contentTypes.filter(val => val.toLowerCase() !== "course");
+    }
     this.currentFilters = {
       primaryCategory: contentTypes,
       board: [],

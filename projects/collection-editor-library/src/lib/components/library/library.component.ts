@@ -111,6 +111,11 @@ export class LibraryComponent implements OnInit, AfterViewInit, OnDestroy {
 
   fetchContentList(filters?, query?) {
     filters = filters || this.defaultFilters;
+    //Filter out course from the list.
+    if(_.get(filters, 'primaryCategory')) {
+      let filteredPrimaryCategory = filters['primaryCategory'].filter(val => val.toLowerCase() !== "course");
+      filters['primaryCategory'] = filteredPrimaryCategory;
+    }
     const option = {
       url: 'composite/v3/search',
       data: {
