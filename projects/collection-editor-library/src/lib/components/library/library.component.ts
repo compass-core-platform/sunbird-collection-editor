@@ -116,6 +116,11 @@ export class LibraryComponent implements OnInit, AfterViewInit, OnDestroy {
       let filteredPrimaryCategory = filters['primaryCategory'].filter(val => val.toLowerCase() !== "course");
       filters['primaryCategory'] = filteredPrimaryCategory;
     }
+    //Add eval mode server in filter search api for Assessment
+    if(_.get(filters, 'primaryCategory').length == 1 && _.get(filters, 'primaryCategory')[0] == "Practice Question Set") {
+      filters['eval'] = "{\"mode\":\"server\"}";
+      filters['channel'] = this.editorService.editorConfig.context.channel
+    }
     const option = {
       url: 'composite/v3/search',
       data: {
