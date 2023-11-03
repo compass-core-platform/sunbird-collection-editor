@@ -5,10 +5,10 @@ export const courseEditorConfig = {
       fullName: 'Vaibahv Bhuva',
       firstName: 'Vaibhav',
       lastName: 'Bhuva',
-      orgIds: ['01309282781705830427']
+      orgIds: ['0138325860604395527']
     },
-    identifier: 'do_1133618765350748161337',
-    channel: '01309282781705830427',
+    identifier: 'do_11390624608791756815',
+    channel: '0138325860604395527',
     // framework: 'nit_k-12',
     // targetFWIds: ['nit_k-12'],
     authToken: ' ',
@@ -461,8 +461,8 @@ export const questionEditorConfig = {
 
 export const collectionEditorConfig = {
   context: {
-      identifier: 'do_113367576496021504151',
-      channel: '01309282781705830427',
+    identifier: 'do_11390624970295705617',
+    channel: '0138325860604395527',
       authToken: '',
       sid: 'vLpZ1rFl6-sxMVHi4RrmrlHw0HsX9ggC',
       did: '1d8e290dd3c2a6a9eeac58568cdef28d',
@@ -500,7 +500,7 @@ export const collectionEditorConfig = {
           isRootOrgAdmin: true
       },
       channelData: {},
-      framework: 'ekstep_ncert_k-12',
+      framework: 'fracing_fw',
       cloudStorage: {
         provider: 'azure',
         presigned_headers: {
