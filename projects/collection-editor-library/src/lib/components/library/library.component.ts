@@ -118,7 +118,7 @@ export class LibraryComponent implements OnInit, AfterViewInit, OnDestroy {
     }
     //Add eval mode server in filter search api for Assessment
     if(_.get(filters, 'primaryCategory').length == 1 && _.get(filters, 'primaryCategory')[0] == "Practice Question Set") {
-      filters['eval'] = "{\"mode\":\"server\"}";
+      filters['evalMode'] = "server";
       filters['channel'] = this.editorService.editorConfig.context.channel
     }
     const option = {
